@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/slid.css" />
+		<script type="text/javascript" src="js/jqe.js" ></script>
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<div id="images">
+				<div class="carousel">
+					<img src="img/cod1.jpg" alt="爱奇艺" width="700" height="350" />
+					<img src="img/gta1.jpg" alt="腾讯视频" width="700" height="350" />
+					<img src="img/mgs1.jpg" alt="优酷视频" width="700" height="350" />
+					<img src="img/cod2.jpg" width="700" height="350" />
+					<img src="img/gta2.jpg" width="700" height="350" />
+					<img src="img/gta3.jpg" width="700" height="350" />
+					<img src="img/cod3.jpg" width="700" height="350" />
+					<img src="img/mgs2.jpg" width="700" height="350" />
+					<img src="img/mgs3.jpg" width="700" height="350" />
+				</div>
+			</div>
+			<div id="timer">
+				
+			</div>
+			<div id="captions">
+				<div class="carousel">
+					<div class="cod">爱奇艺
+						<div class="pager"></div>
+					</div>
+					<div class="gta">腾讯视频
+						<div class="pager"></div>
+					</div>
+					<div class="mgs">优酷视频
+						<div class="pager"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="application/javascript">
+			$(function() {
+				var $imgs = $('#images .carousel'),
+					$capt = $('#captions .carousel'),
+					$timr = $('#timer');
+
+				$imgs.carouFredSel({
+					circular: false,
+					scroll: {
+						easing: 'quadratic',
+						duration: 2,
+						timeoutDuration: 3000,
+						onBefore: function(data) {
+							$capt.trigger('slideTo', ['.' + data.items.visible.first().attr('alt')]);
+							$timr.stop().animate({
+								opacity: 0
+							}, data.scroll.duration);
+						},
+						onAfter: function() {
+							$timr.stop().animate({
+								opacity: 1
+							}, 150);
+						}
+					},
+					auto: {
+						progress: '#timer'
+					},
+					pagination: {
+						container: '.pager',
+						anchorBuilder: function(i) {
+							return '<a class="p' + i + '" href="#"></a>';
+						}
+					}
+				});
+				$capt.carouFredSel({
+					circular: false,
+					auto: false,
+					scroll: {
+						easing: 'quadratic',
+						duration: 2
+					}
+				});
+			});
+		</script>
+	</body>
+
+</html>

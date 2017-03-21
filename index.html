@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>全网VIP视频在线解析</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>全网VIP视频在线解析-首页</title>
 		<meta name="keywords" content="优酷VIP解析,爱奇艺VIP解析,腾讯VIP解析,乐视VIP解析,芒果VIP解析,全网视频解析,VIP在线解析,视频VIP在线解析,VIP视频在线解析" />
 		<meta name="description" content="VIP视频解析" />
-		<link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
-		<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-		<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<link rel="shortcut icon" href="/icon/DivX.ico" />
-		<link rel="bookmark" href="favicon.ico" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="shortcut icon" href="icon/DivX.ico" />
+		<link rel="bookmark" href="icon/DivX.ico" />
+		<style>
+			.colll-center-block {
+				float: none;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
 		<!--[if lt IE 9]><script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script><script src="http://libs.useso.com/js/respond.js/1.4.2/respond.min.js"></script><![endif]-->
-
 		<script type="text/javascript">
 			eval(function(p, a, c, k, e, d) {
 				e = function(c) { return(c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36)) };
@@ -27,21 +36,140 @@
 				return p
 			}('b a(){0 6=1.2("9").4;0 5=1.2("3");0 3=1.2("3").c;0 8=5.e[3].4;0 7=1.2("f");7.d=8+6}', 16, 16, 'var|document|getElementById|jk|value|jkurl|diz|cljurl|jkv|url|dihejk|function|selectedIndex|src|options|player'.split('|'), 0, {}))
 		</script>
+		<script type="text/javascript">
+			function serachsk() {
+				var wq = document.getElementById("searchvideo").value;
+				var h1 = "http://www.soku.com/search_video/q_" + wq;
+				var h2 = "http://so.iqiyi.com/so/q_"+wq+"?source=input";
+				if(wq == "") {
+					alert("请输入视频名称!");
+					return;
+				}
+				window.open(h1,"_blank");
+				window.open(h2,"_blank");
+			}
+		</script>
+
 	</head>
 
 	<body>
-		<br>
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="opacity: 0.8">
+			<div class="container">
+				<div class="navbar-header" role="navigation">
+					<a class="navbar-brand" href="https://mxlcpu.github.io">
+						<img src="img/head.png" alt="会员视频解析站"/>
+					</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 0px;" role="navigation">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">会员电影 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="http://vip.youku.com/vips/movie.html" target="_blank">优酷</a>
+								</li>
+								<li>
+									<a href="http://www.iqiyi.com/dianying/vip.html" target="_blank">爱奇艺</a>
+								</li>
+								<li>
+									<a href="http://yuanxian.le.com/paySearchPage/index.shtml" target="_blank">乐视</a>
+								</li>
+								<li>
+									<a href="http://film.qq.com/film_all_list/allfilm.html?type=movie" target="_blank">腾讯</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">会员热剧 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="http://vip.youku.com/vips/TV.html?tag=10006" target="_blank">优酷</a>
+								</li>
+								<li>
+									<a href="http://www.iqiyi.com/dianshiju/VIP.html" target="_blank">爱奇艺</a>
+								</li>
+								<li>
+									<a href="http://yuanxian.le.com/paySearchPage/index.shtml?filter=2" target="_blank">乐视</a>
+								</li>
+								<li>
+									<a href="http://film.qq.com/film_all_list/allfilm.html?type=tv" target="_blank">腾讯</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">其他视频 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="http://vip.youku.com/vips/TV.html?tag=10007" target="_blank">动漫</a>
+								</li>
+								<li>
+									<a href="http://www.iqiyi.com/dianying/documentaryVIP.html" target="_blank">纪录片</a>
+								</li>
+								<li>
+									<a href="http://www.iqiyi.com/yinyue/VIPConcert.html" target="_blank">演唱会</a>
+								</li>
+								<li>
+									<a href="http://vip.youku.com/vips/deyunshe.html" target="_blank">德云社</a>
+								</li>
+								<li>
+									<a href="http://www.iqiyi.com/edu/VIPeducation.html" target="_blank">教育</a>
+								</li>
+								<li>
+									<a href="http://vip.youku.com/vips/vipLive.html?spm=a2h03.8173531.2069755.25" target="_blank">看直播</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">帮助关于 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="cloud.html">使用帮助</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="about.html">广告合作</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="about.html">作者信息</a>
+								</li>
+								<li>
+									<a href="about.html">联系方式</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="about.html">关于本站</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search" method="get">
+						<div class="form-group">
+							<input id="searchvideo" type="text" class="form-control" placeholder="搜索视频">
+						</div>
+						<button class="btn btn-default" onclick="serachsk()">搜索</button>
+					</form>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</nav>
+
+		<br><br><br><br>
 		<div class="container" style="padding-top:0px;" id="wbk">
 			<div class="alert alert-success alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert">
 <span aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
 				<strong>支持手机,平板,电脑,请低调使用,不要转卖,如发现转卖本人会关站滴!</strong>
 			</div>
-			<div class="col-md-14 column">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="panel panel-default">
 					<div id="kj" class="panel-body">
-						<!--http://www.jsdaima.com/d-588.html-->
-						<iframe src="http://www.jsdaima.com/d-305.html" id="player" width="100%" height="600px" allowTransparency="true" frameborder="0" scrolling="no"></iframe>
+						<iframe class="colll-center-block" src="myCarousel.html" id="player" width="65%" height="350px" allowTransparency="true" frameborder="0" scrolling="no"></iframe>
+						<script type="application/javascript">
+							window.onresize=function(){
+								//$("#player").height=$(window).width/2.5;
+							}
+						</script>
 					</div>
 				</div>
 			</div>
@@ -52,7 +180,7 @@
 						<span class="input-group-addon input-lg" style="width: 80px; ">选择接口</span>
 						<select class="form-control input-lg" id="jk">
 							<option value="http://api.47ks.com/webcloud/?v=" selected>接口一(优酷、乐视、搜狐、爱奇艺、腾讯)</option>
-							<option value="https://aikan-tv.com/tong.php?url=" >接口二(优酷、腾讯、芒果、乐视、搜狐、B站)</option>
+							<option value="https://aikan-tv.com/tong.php?url=">接口二(优酷、腾讯、芒果、乐视、搜狐、B站)</option>
 							<option value="http://yun.mt2t.com/yun?url=">接口三(爱奇艺、搜狐、腾讯、乐视、优酷)</option>
 							<option value="http://www.yydy8.com/Common/?url=">接口四(全部网站通用)</option>
 							<option value="http://000o.cc/jx/ty.php?url=">接口五(爱奇艺、搜狐、乐视、芒果、优酷)</option>
@@ -63,7 +191,7 @@
 						</select>
 					</div><br/>
 					<div class="input-group" style="width: 100%;"><span class="input-group-addon input-lg" style="width: 80px;">播放地址</span><input class="form-control input-lg" type="search" placeholder="在此输入播放地址" id="url"></div><br>
-					<div><button id="bf" type="button" class="btn btn-success btn-lg btn-block" onclick="dihejk()">点击播放</button></div>
+					<div><button id="bf" type="button" class="btn btn-success btn-lg btn-block" onclick="dihejk()">输入网址后点此播放</button></div>
 				</form>
 			</div><br><br>
 			<div class="alert alert-danger" role="alert">所提供的视频来源均由网上搜集。如果不能播放请尝试换一个接口!有什么意见或者建议联系我微信啊!</div>
