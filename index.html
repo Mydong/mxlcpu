@@ -40,13 +40,13 @@
 			function serachsk() {
 				var wq = document.getElementById("searchvideo").value;
 				var h1 = "http://www.soku.com/search_video/q_" + wq;
-				var h2 = "http://so.iqiyi.com/so/q_"+wq+"?source=input";
+				var h2 = "http://so.iqiyi.com/so/q_" + wq + "?source=input";
 				if(wq == "") {
 					alert("请输入视频名称!");
 					return;
 				}
-				window.open(h1,"_blank");
-				window.open(h2,"_blank");
+				window.open(h1, "_blank");
+				window.open(h2, "_blank");
 			}
 		</script>
 
@@ -54,13 +54,19 @@
 
 	<body>
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="opacity: 0.8">
-			<div class="container">
-				<div class="navbar-header" role="navigation">
-					<a class="navbar-brand" href="https://mxlcpu.github.io">
-						<img src="img/head.png" alt="会员视频解析站"/>
-					</a>
+			<div class="container-fluid">
+				<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+        					<span class="sr-only">更多</span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+        					<span class="icon-bar"></span>
+      					</button>
+						<a class="navbar-brand" href="https://mxlcpu.github.io">
+							<img src="img/head.png" alt="会员视频解析站" />
+						</a>
 				</div>
-				<div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 0px;" role="navigation">
+				<div id="navbar" class="navbar-collapse collapse" >
 					<ul class="nav navbar-nav">
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">会员电影 <span class="caret"></span></a>
@@ -166,7 +172,7 @@
 					<div id="kj" class="panel-body">
 						<iframe class="colll-center-block" src="myCarousel.html" id="player" width="65%" height="350px" allowTransparency="true" frameborder="0" scrolling="no"></iframe>
 						<script type="application/javascript">
-							window.onresize=function(){
+							window.onresize = function() {
 								//$("#player").height=$(window).width/2.5;
 							}
 						</script>
@@ -194,7 +200,7 @@
 					<div><button id="bf" type="button" class="btn btn-success btn-lg btn-block" onclick="dihejk()">输入网址后点此播放</button></div>
 				</form>
 			</div><br><br>
-			<div class="alert alert-danger" role="alert">所提供的视频来源均由网上搜集。如果不能播放请尝试换一个接口!有什么意见或者建议联系我微信啊!</div>
+			<div class="alert alert-danger" role="alert">所提供的视频来源均由网上搜集。如果不能播放请先允许flashplayer运行,任然不能播放尝试换一个接口!有什么意见或者建议联系我微信啊!</div>
 		</div><br>
 		<div class="copyright">
 			<div class="container">
